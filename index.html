@@ -18,7 +18,7 @@
     <h1 class="text-4xl mb-8">Home Loan Repayment Calculator</h1>
 
     <div class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8 w-full mx-auto">
-        <form id="loanForm" class="grid grid-cols-2 gap-4 mb-6">
+        <form id="loanForm" class="grid grid-cols-2 gap-4 mb-6 items-center justify-center">
             <div>
                 <label for="loanAmount" class="text-lg">Loan Amount:</label>
                 <input required type="number" id="loanAmount"
@@ -39,9 +39,15 @@
                 <input required type="number" id="lumpSum"
                     class="block w-full rounded-md py-2 px-4 mb-2 bg-gray-700 text-white">
             </div>
-            <div class="col-span-2">
+
+            <div class="col-span-1 flex justify-center mt-4">
+                <button type="reset" id="resetBtn"
+                    class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg w-1/2">Reset</button>
+            </div>
+
+            <div class="col-span-1 flex justify-center mt-4">
                 <button type="submit" id="calculateBtn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-full">Calculate</button>
+                    class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-1/2">Calculate</button>
             </div>
         </form>
     </div>
