@@ -142,7 +142,13 @@ function generateRepaymentTable(
     `;
 }
 
-// Calculate button click event handler
+// Reset button click event handler
+const resetBtn = document.getElementById("resetBtn");
+resetBtn.addEventListener("click", function () {
+  document.getElementById("loanForm").reset(); // Reset the form
+  document.getElementById("resultTable").innerHTML = ""; // Clear the table
+});
+
 // Form submit event handler
 const loanForm = document.getElementById("loanForm");
 loanForm.addEventListener("submit", function (event) {
@@ -155,5 +161,7 @@ loanForm.addEventListener("submit", function (event) {
     const lumpSumAmount = document.getElementById("lumpSum").value;
 
     generateRepaymentTable(loanAmount, interestRate, emiAmount, lumpSumAmount);
+  } else {
+    loanForm.reportValidity(); // Display validation errors
   }
 });
