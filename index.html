@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Loan Repayment Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white p-8 flex flex-col items-center justify-center">
+    <h1 class="text-4xl mb-8">Home Loan Repayment Calculator</h1>
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8 w-full mx-auto">
+        <form id="loanForm" class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+                <label for="loanAmount" class="text-lg">Loan Amount:</label>
+                <input required type="number" id="loanAmount"
+                    class="block w-full rounded-md py-2 px-4 mb-2 bg-gray-700 text-white">
+            </div>
+            <div>
+                <label for="interestRate" class="text-lg">Interest Rate (%):</label>
+                <input required type="text" pattern="[0-9]+(\.[0-9]+)?" id="interestRate"
+                    class="block w-full rounded-md py-2 px-4 mb-2 bg-gray-700 text-white">
+            </div>
+            <div>
+                <label for="emiAmount" class="text-lg">EMI Amount:</label>
+                <input required type="number" id="emiAmount"
+                    class="block w-full rounded-md py-2 px-4 mb-2 bg-gray-700 text-white">
+            </div>
+            <div>
+                <label for="lumpSum" class="text-lg">Lump Sum Payment (Yearly):</label>
+                <input required type="number" id="lumpSum"
+                    class="block w-full rounded-md py-2 px-4 mb-2 bg-gray-700 text-white">
+            </div>
+            <div class="col-span-2">
+                <button type="submit" id="calculateBtn"
+                    class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-full">Calculate</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full mx-auto">
+        <table id="resultTable" class="w-full">
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
